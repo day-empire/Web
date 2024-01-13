@@ -1,46 +1,46 @@
-name: Upload Website
+name: Deploy Website
 
 on:
   push:
     branches:
-    - main
+      - main
     paths:
-    - 'public/**'
+      - "public/**"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: eu-west-2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
 
-    - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./public/ s3://www.dayempire.co.uk --delete
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./public/ s3://www.dayempire.co.uk --delete
 
-    - name: Cloudfront Deploy (via invalidation)
-      uses: chetan/invalidate-cloudfront-action@master
-      env:
-        DISTRIBUTION: 'E1YJ2OIQC8N4MU'
-        PATHS: '/*'
-        AWS_REGION: 'eu-west-2'
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Cloudfront Deploy (via invalidation)
+        uses: chetan/invalidate-cloudfront-action@master
+        env:
+          DISTRIBUTION: "E1YJ2OIQC8N4MU"
+          PATHS: "/*"
+          AWS_REGION: "eu-west-2"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      with:
-        tag_name: 'v${{ github.run_number }}'
-        release_name: 'Release ${{ github.run_number }}'
-        body: ${{ github.event.head_commit.message }}
-        draft: false
-        prerelease: false
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: "v${{ github.run_number }}"
+          release_name: "Release ${{ github.run_number }}"
+          body: ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false
