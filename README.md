@@ -1,3 +1,17 @@
-# Day Empire Website
+# Day Empire
 
-Basic one page website for S3
+`Node` / `Reactjs` corporate website
+
+## Build
+
+```sh
+apt-get update
+apt-get install nodejs npm
+npm install
+```
+
+## Debug
+
+```sh
+npm run preview
+```
