@@ -97,7 +97,7 @@ const AboutUs = () => {
         </p>
 
         <p className="tracking-tight text-gray-600 mt-8">
-          Thank you for choosing Day Empires. We’re excited to be part of your
+          Thank you for choosing Day Empire. We’re excited to be part of your
           Pokémon™ adventure!
         </p>
 

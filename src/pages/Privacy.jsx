@@ -24,9 +24,9 @@ const Privacy = () => {
       <div className="mx-auto px-8 pb-16 lg: sm:pb-16 lg:px-8 max-w-[768px]">
         <h2 className="font-bold font-display text-xl tracking-tight text-black pb-6">1. Acceptance of Terms</h2>
         <p className="tracking-tight text-gray-600">
-          By accessing and using our services rendered on cardmarket, you agree
+          By accessing and using our services rendered on our third party sales platforms (eBay, Cardmarket), you agree
           to be bound by these terms and conditions in addition to the terms and
-          conditions outlined by cardmarket.
+          conditions outlined by those afforementioned third party sales platforms.
         </p>
 
         <h2 className="font-bold font-display text-xl mt-8 tracking-tight text-black pb-6">2. Product Information </h2>

@@ -21,10 +21,10 @@ const Terms = () => {
 
       <div className="mx-auto px-8 pb-16 lg: sm:pb-16 lg:px-8 max-w-[768px]">
         <p className="tracking-tight text-gray-600">
-          Day Empire Group LTD collects, processes and uses your personal data
+          Day Empire Group Ltd collects, processes and uses your personal data
           in compliance with the strict UK & European data protection
-          regulations. Apart from certain particulars required by the cardmarket
-          platform, you may determine yourself which information to provide.
+          regulations. Apart from certain particulars required by our third party sales platforms (eBay, Cardmarket),
+          you may determine yourself which information to provide.
         </p>
         <p className="tracking-tight text-gray-600 mt-8">
           By using one of our third party sales platforms (eBay, Cardmarket), but at the latest when
@@ -62,10 +62,10 @@ const Terms = () => {
         </p>
 
         <h2 className="font-bold font-display text-xl mt-8 tracking-tight text-black pb-6">
-          Day Empire Group LTD
+          Company Information
         </h2>
         <p className="tracking-tight text-gray-600">
-          3rd Floor, 86-90 Paul Street, London, EC2A 4NE, United Kingdom
+          DayEmpire is a website operated by Day Empire Group Ltd ("we" or "us"). We are a company registered in England and Wales under company number 16347622 and our registered office is at 3rd floor, 86-90 Paul Street, London, EC2A 4NE, UK.
         </p>
         <h2 className="font-bold font-display text-xl mt-8 tracking-tight text-black pb-6">
           Contact us

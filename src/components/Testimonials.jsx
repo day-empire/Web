@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Text from './Text';
+import TimeAgo from '../utils/DateUtils';
 
 function Testimonial() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({ testimonials: [], totalReviews: 1500, weightedAverage: 4.8 });
 
   useEffect(() => {
     fetch('https://static.dayempire.co.uk/stats/feedback?max=12')
       .then((res) => res.json())
-      .then((json) => setData(json.testimonials))
+      .then((json) => setData(json))
       .catch((err) => console.error('Error fetching data:', err));
   }, []);
 
@@ -32,6 +33,7 @@ function Testimonial() {
             return (
               <div id={"testimony-" + i} className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
                 <img src={testimony.score == 4 ? "/four-stars.webp" : "/five-stars.webp"} height={200} width={100} className="mb-2" alt={testimony.score + " Star Review"}/>
+                <h3 className="text-black text-2l mb-1"><span className="font-bold">{testimony.alias}</span><span className="text-gray-600">, {TimeAgo(testimony.date)}</span></h3>
                 <h3 className="font-bold text-black text-2l mb-1">{testimony.alias}</h3>
                 <p><Text text={testimony.comment} /></p>
               </div>
@@ -40,18 +42,18 @@ function Testimonial() {
         </div>
 
         <div className="mx-auto sm:flex justify-center gap-2 mt-10 sm:mt-16 text-center">
-          <a
-            href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire"
-            title="See Day Empire Full Collection" target="_blank"
-            className="mb-2 sm:mb-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-black rounded-lg hover:bg-gray-700 text-white"
-          >
-            See all reviews
-          </a>
-
+          <div className="sm:grid justify-center text-center">
+            <span className="px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
+              <strong>{data.weightedAverage.toFixed(2)}</strong><span>&nbsp;/&nbsp;</span><strong>5.00</strong><span>&nbsp;rating</span>
+            </span>
+            <span className="text-gray-600 sm:text-xs">
+              Based on <a href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire" title="See All Reviews" target="_blank" className="underline hover:text-gray-600">{data.totalReviews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} reviews</a>
+            </span>
+          </div>
           <a
             href="https://www.facebook.com/thedayempire"
-            title="Join Day Empire community" target="_blank"
-            className="flex items-center underline hover:no-underline justify-center gap-2 px-6 py-3 relative bg-white rounded-lg text-black hover:text-gray-500"
+            title="Join Day Empire Community" target="_blank"
+            className="mb-2 sm:mb-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-black rounded-lg hover:bg-gray-700 text-white"
           >
             Join our community
           </a>
@@ -59,21 +61,6 @@ function Testimonial() {
       </div>
     </div>
   );
-
-  if (!data) {
-    return (
-        <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
-            Over 100,000 items for sale!
-        </span>
-    );
-  }
-  else {
-    return (
-      <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
-          {data.totalProducts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} items for sale!
-      </span>
-    );
-  }
 }
 
 export default Testimonial;
