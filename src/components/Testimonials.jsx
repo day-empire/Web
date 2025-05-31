@@ -15,7 +15,7 @@ function Testimonial() {
     return (
     <div className="mx-8 mb-16 lg:mb-32">
 
-      <div className="mx-auto max-w-7xl lg:px-8 pb-10 text-center lg:pb-16 relative">
+      <div className="mx-auto max-w-7xl lg:px-8 pb-8 text-center lg:pb-12 relative">
         <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
             Testimonials
         </span>
