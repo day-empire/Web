@@ -48,7 +48,7 @@ const Footer = () => {
             </li>{/* Hide  
             <li className="mt-2 sm:mt-0">
               <Link
-                to="/#SellCards"
+                to="/contact-us#SellCards"
                 title="Sell Pokemon Cards"
                 className="text-black hover:text-gray-500 hover:underline mt-1"
               >

@@ -1,13 +1,17 @@
-import React from "react";
+import { useEffect } from 'react';
 import MetaUpdater from "../MetaData";
 
 const ContactUs = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
-
-
     <> 
-    
     <MetaUpdater title="Contact Day Empire - Pokémon™ Collectibles & Trading Assistance" description="Have questions or need Pokémon™ trading card advice? Contact Day Empire today—your trusted partner in collecting and trading."/>
     <div className="mx-auto">
 

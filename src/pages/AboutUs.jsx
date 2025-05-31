@@ -1,10 +1,16 @@
-import React from "react";
+import { useEffect } from 'react';
 import MetaUpdater from "../MetaData";
 
 const AboutUs = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
-
-
     <>
     <MetaUpdater title="About Day Empire - Pokémon™ Card Experts & Collectors" description="At Day Empire, we’re Pokémon™ trading card specialists, combining expertise with technology to deliver an unparalleled collecting experience. Join us in the world of Pokémon™!"/>
 
