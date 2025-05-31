@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Text from './Text';
 
 function Testimonial() {
   const [data, setData] = useState([]);
@@ -27,12 +28,12 @@ function Testimonial() {
 
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="columns-1 sm:columns-2 lg:columns-3 space-y-4">
-          {data.map(function(testimony, i){
+          {data.map(function(testimony, i) {
             return (
               <div id={"testimony-" + i} className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
                 <img src={testimony.score == 4 ? "/four-stars.webp" : "/five-stars.webp"} height={200} width={100} className="mb-2" alt={testimony.score + " Star Review"}/>
                 <h3 className="font-bold text-black text-2l mb-1">{testimony.alias}</h3>
-                <p>{testimony.comment}</p>
+                <p><Text text={testimony.comment} /></p>
               </div>
           );
           })}
