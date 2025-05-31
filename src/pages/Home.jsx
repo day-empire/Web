@@ -1,12 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import FAQ from "../components/FAQ";
-import Benefits from "../components/Benefits";
 import AboutUsHome from "../components/AboutUsHome";
+import Benefits from "../components/Benefits";
+import CardCount from "../components/CardCount";
 import Collection from "../components/Collection";
+import FAQ from "../components/FAQ";
+import MetaUpdater from "../MetaData";
 import SellPanel from "../components/SellPanel";
 import Testimonial from "../components/Testimonials";
-import MetaUpdater from "../MetaData";
 
 const Home = () => {
   return (
@@ -69,9 +69,7 @@ const Home = () => {
         </div>
 
         <div className="mx-auto relative max-w-7xl px-8 sm:px-6 lg:px-8 pt-16 pb-8 text-center lg:pt-32 lg:pb-32 z-100">
-          <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
-            Over 30,000 items for sale!
-          </span>
+          <CardCount />
           <h1 className="mx-auto max-w-5xl font-bold font-display text-5xl tracking-tight text-black sm:text-6xl xl:text-7xl">
             Elevate your Pokémon™ collection to the next level
           </h1>

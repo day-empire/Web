@@ -19,54 +19,54 @@ const Testimonial = () => {
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="columns-1 sm:columns-2 lg:columns-3 space-y-4">
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">SilverFoxG</h3>
             <p>Dispatched quickly, arrived in great condition and well packaged. Great and friendly seller.</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">Vici314</h3>
             <p>Well packaged, good condition and arrived quickly.</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">DHertz</h3>
             <p>Perfect!</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">QuailMail</h3>
             <p>Fantastic customer service!</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">Big Ash</h3>
             <p>The card has arrived quickly & in great condition.</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">PADuk</h3>
             <p>A++.</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">Zim108</h3>
             <p>Great seller. Fast shipping.</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">GeckGraph</h3>
             <p>Perfect, exactly what I wanted!</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">Stratic-10</h3>
             <p>Arrived Quickly. Happy and sent a message to say it had been dispatched.</p>
           </div>
           <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={116} width={19} className="mb-2" alt="Five Star Review"/>
+            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
             <h3 className="font-bold text-black text-2l mb-1">ScalpMoutain</h3>
-            <p>Very quick ship, responsive seller who quickly helped when there was an issue with the order.</p>
+            <p>Very quick shipping, responsive seller who quickly helped when there was an issue with the order.</p>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ const Testimonial = () => {
           </a>
 
           <a
-            href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire"
+            href="https://www.facebook.com/thedayempire"
             title="Join Day Empire community" target="_blank"
             className="flex items-center underline hover:no-underline justify-center gap-2 px-6 py-3 relative bg-white rounded-lg text-black hover:text-gray-500"
           >

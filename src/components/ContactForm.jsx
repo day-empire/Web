@@ -9,6 +9,7 @@ const ContactForm = () => {
     "/contact-us",
     "/terms",
     "/privacy",
+    "/qr",
   ].includes(location.pathname);
 
   const [formData, setFormData] = useState({

@@ -13,7 +13,7 @@ const Benefits = () => {
           Building trust, one card at a time
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-gray-600">
-          At Day Empires, we pride ourselves on expert knowledge, certified
+          At Day Empire, we pride ourselves on expert knowledge, certified
           authenticity, innovative technology, and customer-centric service. Our
           team lives and breathes Pokémon™, staying ahead of the latest trends
           and market insights to bring you the best.

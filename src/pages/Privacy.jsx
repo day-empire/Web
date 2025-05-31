@@ -37,7 +37,7 @@ const Privacy = () => {
 
         <h2 className="font-bold font-display text-xl mt-8 tracking-tight text-black pb-6">3. Orders and Payment</h2>
         <p className="tracking-tight text-gray-600">
-          Placing an order via cardmarket constitutes an offer to purchase the
+          Placing an order via one of our third party sales platforms (eBay, Cardmarket) constitutes an offer to purchase the
           products. Payment is required at the time of order placement or
           shortly thereafter.
         </p>

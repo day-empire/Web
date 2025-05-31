@@ -9,7 +9,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
-import NotFound from "./pages/NotFoud";
+import NotFound from "./pages/NotFound";
 import Canonical from "./Canonical";
 import "./App.css";
 
@@ -20,6 +20,7 @@ function App() {
     "/about-us": "https://dayempire.com/about-us",
     "/contact-us": "https://dayempire.com/contact-us",
     "/privacy": "https://dayempire.com/privacy",
+    "/qr": "https://dayempire.com/about-us",
     "/terms": "https://dayempire.com/terms",
 };
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/terms" element={<Terms />} />
           <Route path='/privacy' element={<Privacy />}/>
+          <Route path="/qr" element={<AboutUs />} />
           <Route path='*' element={<NotFound />}/>
         </Routes>
       </main>
@@ -46,8 +48,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-

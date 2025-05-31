@@ -23,23 +23,26 @@ const FAQItem = ({ question, answer }) => {
 const FAQ = () => {
   const faqs = [
     {
-      question: "Who our favourite Pokémon card?",
+      question: "What is our favourite Pokémon?",
       answer: "Sudowoodo, because he is a glorious tree.",
     },
     {
-      question: "How do I sell my pokemon card?",
+      question: "Do you buy Pokémon cards?",
       answer:
-        "Fill out the form, with some pics and details of the cards you have and we will send you a quote with details on how to proceed from there.",
+        "If you have some Pokémon cards to sell, go ahead and fill out the form, with some pictures and details of the cards you have and we will send you a quote with details on how to proceed from there.",
     },
     {
       question: "When will I receive my order?",
       answer:
-        "We post orders everyday, aim to dispatch within 48/h. (Depends on the shipping method paid for) but usually 48/h delivery time from dispatch.",
+        "We post orders everyday, aim to dispatch within 48hr. (Depends on the shipping method paid for) but usually 48hr delivery time from dispatch.",
     },
-    { question: "Do you ship worldwide?", answer: "Only in the UK for now." },
     {
-      question: "How much does shipping cost?",
-      answer: "Free (if on ebay), or 1.10 if on Cardmarket.",
+      question: "Where do you ship to?",
+      answer: "We currently ship to the United Kingdom including Northern Ireland, the Isle of Man & the Channel Isles",
+    },
+    {
+      question: "What do you charge for shipping?",
+      answer: "It is market dependent (eBay or Cardmarket), but we try to keep it as low as possible. We offer insured shipping on high value orders.",
     },
   ];
 

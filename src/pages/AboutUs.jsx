@@ -38,7 +38,7 @@ const AboutUs = () => {
         </h2>
 
         <p className="tracking-tight text-gray-600">
-          At Day Empires, we’re not just another trading card shop—we’re your
+          At Day Empire, we’re not just another trading card shop—we’re your
           dedicated partners in the exciting world of Pokémon™. Our team of
           passionate specialists combines deep knowledge with cutting-edge
           technology to offer you an unparalleled experience in collecting and
@@ -77,7 +77,7 @@ const AboutUs = () => {
               experience and make your collecting journey as smooth as possible.
             </li>
             <li>
-              Customer-Centric Service: At Day Empires, you’re more than just a
+              Customer-Centric Service: At Day Empire, you’re more than just a
               customer—you’re a valued member of our community. We’re here to
               support you every step of the way, whether you’re looking for
               advice, have questions, or need assistance with your order.
@@ -86,7 +86,7 @@ const AboutUs = () => {
         </div>
 
         <h2 className="font-bold font-display text-xl mt-8 tracking-tight text-black pb-6">
-          Join the Day Empires Community
+          Join the Day Empire Community
         </h2>
         <p className="tracking-tight text-gray-600">
           We invite you to explore our curated selection of Pokémon™ cards and

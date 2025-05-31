@@ -27,9 +27,9 @@ const Terms = () => {
           platform, you may determine yourself which information to provide.
         </p>
         <p className="tracking-tight text-gray-600 mt-8">
-          By using the website www.cardmarket.com, but at the latest when
+          By using one of our third party sales platforms (eBay, Cardmarket), but at the latest when
           registering as a user, you grant your consent to the collection,
-          processing and use of the entered personal data by The Day Empire as
+          processing and use of the entered personal data by Day Empire Group LTD as
           responsible entity on their servers. Please note that the data
           transmitted by you as part of the use of the website are processed
           externally by our own systems which are located securely in the UK. It
