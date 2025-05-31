@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 
-const Testimonial = () => {
-  return (
+function Testimonial() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://static.dayempire.co.uk/stats/feedback?max=12')
+      .then((res) => res.json())
+      .then((json) => setData(json.testimonials))
+      .catch((err) => console.error('Error fetching data:', err));
+  }, []);
+
+    return (
     <div className="mx-8 mb-16 lg:mb-32">
 
       <div className="mx-auto max-w-7xl lg:px-8 pb-10 text-center lg:pb-16 relative">
@@ -18,58 +27,16 @@ const Testimonial = () => {
 
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="columns-1 sm:columns-2 lg:columns-3 space-y-4">
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">SilverFoxG</h3>
-            <p>Dispatched quickly, arrived in great condition and well packaged. Great and friendly seller.</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">Vici314</h3>
-            <p>Well packaged, good condition and arrived quickly.</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">DHertz</h3>
-            <p>Perfect!</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">QuailMail</h3>
-            <p>Fantastic customer service!</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">Big Ash</h3>
-            <p>The card has arrived quickly & in great condition.</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">PADuk</h3>
-            <p>A++.</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">Zim108</h3>
-            <p>Great seller. Fast shipping.</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">GeckGraph</h3>
-            <p>Perfect, exactly what I wanted!</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">Stratic-10</h3>
-            <p>Arrived Quickly. Happy and sent a message to say it had been dispatched.</p>
-          </div>
-          <div className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
-            <img src="/five-stars.webp" height={200} width={100} className="mb-2" alt="Five Star Review"/>
-            <h3 className="font-bold text-black text-2l mb-1">ScalpMoutain</h3>
-            <p>Very quick shipping, responsive seller who quickly helped when there was an issue with the order.</p>
-          </div>
+          {data.map(function(testimony, i){
+            return (
+              <div id={"testimony-" + i} className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
+                <img src={testimony.score == 4 ? "/four-stars.webp" : "/five-stars.webp"} height={200} width={100} className="mb-2" alt={testimony.score + " Star Review"}/>
+                <h3 className="font-bold text-black text-2l mb-1">{testimony.alias}</h3>
+                <p>{testimony.comment}</p>
+              </div>
+          );
+          })}
         </div>
-
 
         <div className="mx-auto sm:flex justify-center gap-2 mt-10 sm:mt-16 text-center">
           <a
@@ -88,16 +55,24 @@ const Testimonial = () => {
             Join our community
           </a>
         </div>
-
       </div>
-
-      </div>
-
+    </div>
   );
-};
+
+  if (!data) {
+    return (
+        <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
+            Over 100,000 items for sale!
+        </span>
+    );
+  }
+  else {
+    return (
+      <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
+          {data.totalProducts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} items for sale!
+      </span>
+    );
+  }
+}
 
 export default Testimonial;
-
-
-
-

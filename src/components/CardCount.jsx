@@ -11,16 +11,18 @@ function CardCount() {
   }, []);
 
   if (!data) {
-    <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
-        Over 100,000 items for sale!
-    </span>
+    return (
+        <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
+            Over 100,000 items for sale!
+        </span>
+    );
   }
   else {
-  return (
-    <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
-        {data.totalProducts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} items for sale!
-    </span>
-  );
+    return (
+      <span className="mb-6 px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
+          {data.totalProducts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} items for sale!
+      </span>
+    );
   }
 }
 
