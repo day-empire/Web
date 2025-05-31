@@ -25,6 +25,14 @@ function Testimonial() {
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-gray-600">
             Don’t just take our word for it! Discover why our customers love our service.
         </p>
+        <div className="sm:grid justify-center text-center mt-4">
+          <span className="px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
+            <strong>{data.weightedAverage.toFixed(2)}</strong><span>&nbsp;/&nbsp;</span><strong>5.00</strong><span>&nbsp;rating</span>
+          </span>
+          <span className="text-gray-600 sm:text-xs">
+            Based on <a href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire" title="See All Reviews" target="_blank" className="underline hover:text-gray-600">{data.totalReviews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} reviews</a>
+          </span>
+        </div>
       </div>
 
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -41,14 +49,6 @@ function Testimonial() {
         </div>
 
         <div className="mx-auto sm:flex justify-center gap-2 mt-10 sm:mt-16 text-center">
-          <div className="sm:grid justify-center text-center">
-            <span className="px-4 py-1 bg-orange-200 mx-auto inline-flex rounded-4xl">
-              <strong>{data.weightedAverage.toFixed(2)}</strong><span>&nbsp;/&nbsp;</span><strong>5.00</strong><span>&nbsp;rating</span>
-            </span>
-            <span className="text-gray-600 sm:text-xs">
-              Based on <a href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire" title="See All Reviews" target="_blank" className="underline hover:text-gray-600">{data.totalReviews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} reviews</a>
-            </span>
-          </div>
           <a
             href="https://www.facebook.com/thedayempire"
             title="Join Day Empire Community" target="_blank"
