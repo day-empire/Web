@@ -18,11 +18,11 @@ const ContactForm = () => {
     details: "",
   });
 
-    const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({});
   const [isValid, setIsValid] = useState(false);
-const [selectedOption, setSelectedOption] = useState("General Inquiry"); // Default selection
+  const [selectedOption, setSelectedOption] = useState("General Enquiry"); // Default selection
 
-    const validateForm = () => {
+  const validateForm = () => {
     let newErrors = {};
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -42,7 +42,7 @@ const [selectedOption, setSelectedOption] = useState("General Inquiry"); // Defa
     setFormData({ ...formData, [e.target.name]: e.target.value });
     validateForm();
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -68,7 +68,7 @@ const [selectedOption, setSelectedOption] = useState("General Inquiry"); // Defa
                 width={569}
                 height={696}
                 className="w-0 xl:w-[400px] 2xl:w-[569px]"
-                alt="Image shows a Pikachu Pokemon card"
+                alt="Image shows a Pikachu Pokémon card"
               />
             </div>
             <div className="hidden lg:inline absolute -right-60 top-100">
@@ -77,7 +77,7 @@ const [selectedOption, setSelectedOption] = useState("General Inquiry"); // Defa
                 width={581}
                 height={703}
                 className="w-0 xl:w-[400px] 2xl:w-[581px]"
-                alt="Image shows stacked Pokemon cards"
+                alt="Image shows stacked Pokémon cards"
               />
             </div>
           </>
@@ -120,75 +120,75 @@ const [selectedOption, setSelectedOption] = useState("General Inquiry"); // Defa
 
       <div className="flex mx-8 mb-20 sm:mx-16 justify-center lg:mb-32">
         <form
-  id="ContactForm"
-  className="w-xl"
-  method="POST"
-  encType="multipart/form-data"
-  onSubmit={handleSubmit}
->
+          id="ContactForm"
+          className="w-xl"
+          method="POST"
+          encType="multipart/form-data"
+          onSubmit={handleSubmit}
+        >
 
-  <div className="w-full mb-6">
-        <label htmlFor="inquiryType" className="py-2">Inquiry Type</label>
-        <select id="inquiryType" name="inquiryType" className="border-1 w-full border-gray-300 p-3" onChange={handleSelectChange}>
-          <option value="Buying Enquiries">Buying Enquiries</option>
-          <option value="Selling Enquiries">Selling Enquiries</option>
-          <option value="Custom Orders">Business Enquiries</option>
-        </select>
- </div>
+          <div className="w-full mb-6">
+            <label htmlFor="enquiryType" className="py-2">Enquiry Type</label>
+            <select id="enquiryType" name="enquiryType" className="border-1 w-full border-gray-300 p-3" onChange={handleSelectChange}>
+              <option value="General Enquiry">General Enquiry</option>
+              <option value="Buying Enquiry">Buying Enquiry</option>
+              <option value="Selling Enquiry">Selling Enquiry</option>
+            </select>
+          </div>
 
-  <div className="w-full mb-6">
-    <label htmlFor="name" className="py-2">
-      Name
-    </label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      className="border-1 w-full border-gray-300 p-3"
-      onChange={handleChange}
-    />
-    {errors.name && <small className="text-red-500">{errors.name}</small>}
-  </div>
+          <div className="w-full mb-6">
+            <label htmlFor="name" className="py-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              className="border-1 w-full border-gray-300 p-3"
+              onChange={handleChange}
+            />
+            {errors.name && <small className="text-red-500">{errors.name}</small>}
+          </div>
 
-  <div className="w-full mb-6">
-    <label htmlFor="email" className="py-2">
-      Email
-    </label>
-    <input
-      type="text"
-      id="email"
-      name="email"
-      required
-      className="border-1 w-full border-gray-300 p-3"
-      onChange={handleChange}
-    />
-    {errors.email && <small className="text-red-500">{errors.email}</small>}
-  </div>
+          <div className="w-full mb-6">
+            <label htmlFor="email" className="py-2">
+              Email
+            </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              required
+              className="border-1 w-full border-gray-300 p-3"
+              onChange={handleChange}
+            />
+            {errors.email && <small className="text-red-500">{errors.email}</small>}
+          </div>
 
-  <div className="w-full mb-6">
-    <label htmlFor="details" className="py-2">
-      Message
-    </label>
-    <textarea
-      rows="8"
-      id="details"
-      name="details"
-      required
-      className="border-1 w-full border-gray-300 p-3"
-      onChange={handleChange}
-    ></textarea>
-    {errors.details && <small className="text-red-500">{errors.details}</small>}
-  </div>
+          <div className="w-full mb-6">
+            <label htmlFor="details" className="py-2">
+              Message
+            </label>
+            <textarea
+              rows="8"
+              id="details"
+              name="details"
+              required
+              className="border-1 w-full border-gray-300 p-3"
+              onChange={handleChange}
+            ></textarea>
+            {errors.details && <small className="text-red-500">{errors.details}</small>}
+          </div>
 
-  <a
-  href={`mailto:contact@dayempire.co.uk?subject=Bulk%20Card%20Sale%20Enquiry%20-%20${encodeURIComponent(formData.name)}&body=Name:%20${encodeURIComponent(formData.name)}%0D%0AEmail:%20${encodeURIComponent(formData.email)}%0D%0ACard%20Bulk%20Details:%0D%0A${encodeURIComponent(formData.details)}`}
-  className="w-full sm:w-auto cursor-pointer inline-flex items-center justify-center px-6 py-3 bg-black rounded-lg hover:bg-gray-700 text-white"
->
-  Enquire Today
-</a>
+          <a
+            href={`mailto:contact@dayempire.co.uk?subject=Bulk%20Card%20Sale%20Enquiry%20-%20${encodeURIComponent(formData.enquiryType)}&body=Name:%20${encodeURIComponent(formData.name)}%0D%0AEmail:%20${encodeURIComponent(formData.email)}%0D%0ACard%20Bulk%20Details:%0D%0A${encodeURIComponent(formData.details)}`}
+            className="w-full sm:w-auto cursor-pointer inline-flex items-center justify-center px-6 py-3 bg-black rounded-lg hover:bg-gray-700 text-white"
+          >
+            Enquire Today
+          </a>
 
-</form>
+        </form>
       </div>
     </>
   );

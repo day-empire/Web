@@ -68,9 +68,9 @@ const Collection = () => {
       <div className="mx-auto max-w-7xl text-center px-8 sm:px-6 mb-16 lg:mb-32">
         <div className="sm:grid md:grid-cols-3 sm:gap-6">
           <a
-            href="https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pokemon"
+            href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire/Offers/Singles"
             target="_blank"
-            title="Pokemon Cards"
+            title="Pokémon Cards"
             className="inline-block mb-10 sm:mb-0"
           >
             <div className="bg-white rounded-lg cursor-pointer">
@@ -94,10 +94,10 @@ const Collection = () => {
           </a>
 
           <a
-            href="https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pokemon+coin"
+            href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire/Offers/Coins"
             target="_blank"
             className="inline-block mb-10 sm:mb-0"
-            title="Pokemon Coins"
+            title="Pokémon Coins"
           >
             <div className="bg-white rounded-lg cursor-pointer">
               <img
@@ -119,7 +119,7 @@ const Collection = () => {
           </a>
 
           <a
-            href="https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pokemon+dice"
+            href="https://www.cardmarket.com/en/Pokemon/Users/DayEmpire/Offers/Dice"
             title="Pokemon Dice"
             target="_blank"
           >
@@ -178,7 +178,7 @@ const Collection = () => {
               <button
                 id="searcInput"
                 onClick={handleSearch}
-                title="Search for a Pokemon Card"
+                title="Search for a Pokémon Card"
                 className="hidden mb-2 sm:mb-0 sm:inline items-center justify-center gap-2 px-6 py-3 bg-black cursor-pointer rounded-lg hover:bg-gray-700 text-white"
                 type="submit"
               >
@@ -211,7 +211,7 @@ const Collection = () => {
 
               <button
                 id="searcInput"
-                title="Search for a Pokemon Card"
+                title="Search for a Pokémon Card"
                 onClick={handleSearch}
                 className="inline mb-2 sm:mb-0 sm:hidden items-center justify-center gap-2 px-6 py-3 cur bg-black rounded-lg hover:bg-gray-700 text-white"
                 type="submit"

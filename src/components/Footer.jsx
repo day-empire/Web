@@ -40,7 +40,7 @@ const Footer = () => {
         
               <Link
                 to="/#BuyCards"
-                title="Buy Pokemon cards"
+                title="Buy Pokémon cards"
                 className="text-black hover:text-gray-500 hover:underline mt-1"
               >
                 Buy
@@ -49,7 +49,7 @@ const Footer = () => {
             <li className="mt-2 sm:mt-0">
               <Link
                 to="/contact-us#SellCards"
-                title="Sell Pokemon Cards"
+                title="Sell Pokémon Cards"
                 className="text-black hover:text-gray-500 hover:underline mt-1"
               >
                 Sell

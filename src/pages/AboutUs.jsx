@@ -17,7 +17,7 @@ const AboutUs = () => {
     <div className="mx-auto relative">
 
     
-     <div className="hidden lg:inline absolute -right-50 top-10"><img src='/squirtle-card.webp' width={574} height={696} className="w-0 xl:w-[500px] 2xl:w-[600px]"  alt='Image shows a Squirtle Pokemon card'/></div>
+     <div className="hidden lg:inline absolute -right-50 top-10"><img src='/squirtle-card.webp' width={574} height={696} className="w-0 xl:w-[500px] 2xl:w-[600px]"  alt='Image shows a Squirtle Pokémon card'/></div>
      <div className="hidden lg:inline absolute right-70 top-10"><img src='/raichu-coin.webp' width={182} height={209}  className="w-0  xl:w-[168px] 2xl:w-[168px]"  alt='Image shows a Raichu coin'/></div>
      <div className="hidden lg:inline absolute left-30 top-10"><img src='/blastiose-coin.webp' width={229} height={296}  className="w-0 xl:w-[168px] 2xl:w-[168px]"  alt='Image shows a Blastoise coin'/></div>
      <div className="hidden lg:inline absolute -right-20 top-80 -rotate-10"><img src='/sam-owner-card.webp' width={467} height={627}  className="w-0  xl:w-[300px] 2xl:w-[467px]"  alt='Image shows Sam, owner of the Day Empire'/></div>
@@ -29,12 +29,12 @@ const AboutUs = () => {
           About Day Empire
         </span>
         <h1 className="mx-auto sm:max-w-4xl lg:max-w-5xl font-bold font-display text-5xl tracking-tight text-black sm:text-7xl">
-          Meet the Pokemon™ Experts
+          Meet the Pokémon™ Experts
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-gray-600">
           At Day Empire, we’re passionate specialists in Pokémon™ trading cards,
           combining cutting-edge technology with unparalleled expertise to bring
-          you the finest in collectibles.
+          you the finest in collectables.
         </p>
       </div>
 

@@ -12,7 +12,7 @@ const ContactUs = () => {
 
   return (
     <> 
-    <MetaUpdater title="Contact Day Empire - Pokémon™ Collectibles & Trading Assistance" description="Have questions or need Pokémon™ trading card advice? Contact Day Empire today—your trusted partner in collecting and trading."/>
+    <MetaUpdater title="Contact Day Empire - Pokémon™ Collectables & Trading Assistance" description="Have questions or need Pokémon™ trading card advice? Contact Day Empire today—your trusted partner in collecting and trading."/>
     <div className="mx-auto">
 
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 pt-20 pb-20 text-center lg:pt-32 lg:pb-32">

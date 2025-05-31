@@ -21,8 +21,8 @@ const Home = () => {
   return (
     <>
       <MetaUpdater
-        title="Day Empire - Pokémon™ Trading Cards & Collectibles"
-        description="Discover top-tier Pokémon™ trading cards at At Day Empire. Expert curation, cutting-edge technology, and a passion for collectibles—be the best, like no one ever was!"
+        title="Day Empire - Pokémon™ Trading Cards & Collectables"
+        description="Discover top-tier Pokémon™ trading cards at At Day Empire. Expert curation, cutting-edge technology, and a passion for collectables—be the best, like no one ever was!"
       />
       <div className="bg-[url('/empire-crown.webp')] bg-bottom sm:bg-[0%_80%] bg-cover xl:h-screen">
         <div className="hidden xl:inline absolute left-0 xl:left-20 top-100 z-100">
@@ -89,10 +89,10 @@ const Home = () => {
           <div className="sm:flex justify-center gap-2 mt-6">
             <a
               href="#BuyCards"
-              title="Buy Pokemon cards"
+              title="Buy Pokémon cards"
               className="mb-2 sm:mb-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-black rounded-lg hover:bg-gray-700 text-white"
             >
-              Buy Pokemon Cards
+              Buy Pokémon Cards
             </a>
 
             <Link

@@ -14,7 +14,7 @@ const AboutUsHome = () => {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-gray-600">
             Our expert team meticulously verifies each card to ensure genuine
-            collectibles, offering you only the best in the market. Experience
+            collectables, offering you only the best in the market. Experience
             top-tier customer support and a seamless shopping experience, making
             us your trusted partner in building a prestigious collection.
           </p>

@@ -23,8 +23,8 @@ const Certfication = () => {
               height={140}
               width={140}
               role="img"
-              aria-label="Pokemon Trading Cards"
-              alt="Pokemon Trading Cards"
+              aria-label="Pokémon Trading Cards"
+              alt="Pokémon Trading Cards"
             />
           </li>
           <li>
