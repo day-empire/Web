@@ -34,7 +34,6 @@ function Testimonial() {
               <div id={"testimony-" + i} className="bg-[#fef5e9] p-6 rounded-md break-inside-avoid">
                 <img src={testimony.score == 4 ? "/four-stars.webp" : "/five-stars.webp"} height={200} width={100} className="mb-2" alt={testimony.score + " Star Review"}/>
                 <h3 className="text-black text-2l mb-1"><span className="font-bold">{testimony.alias}</span><span className="text-gray-600">, {TimeAgo(testimony.date)}</span></h3>
-                <h3 className="font-bold text-black text-2l mb-1">{testimony.alias}</h3>
                 <p><Text text={testimony.comment} /></p>
               </div>
           );
