@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SellPanel = () => {
   return (
@@ -20,12 +21,13 @@ const SellPanel = () => {
           Have questions about Pokémon™ cards? We’re here to help! Whether you're curious about bulk cards, valuations, or general advice, we’ve got you covered. Just reach out, and we’ll be happy to chat, share insights, and help with whatever you need. Let’s connect!
           </p>
           <div className="flex mt-6">
-            <a
-              href="#SellCards"
+            <Link
+              to="/#SellCards"
               title="Sell unwanted cards with Day Empire"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-black rounded-lg hover:bg-gray-700 text-white"
             >
-              Get in touch</a>
+              Get in touch
+            </Link>
           </div>
        </div>
       </div>

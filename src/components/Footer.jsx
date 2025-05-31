@@ -38,17 +38,17 @@ const Footer = () => {
           <ul className="flex flex-col mb-6 sm:mb-0 sm:flex-row sm:gap-4 sm:items-center">
             <li className="mt-0 sm:mt-0">
         
-              <a
-                href="#BuyCards"
+              <Link
+                to="/#BuyCards"
                 title="Buy Pokemon cards"
                 className="text-black hover:text-gray-500 hover:underline mt-1"
               >
                 Buy
-              </a>
+              </Link>
             </li>{/* Hide  
             <li className="mt-2 sm:mt-0">
-              <a
-                href="#SellCards"
+              <Link
+                to="/#SellCards"
                 title="Sell Pokemon Cards"
                 className="text-black hover:text-gray-500 hover:underline mt-1"
               >

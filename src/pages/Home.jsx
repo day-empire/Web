@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import AboutUsHome from "../components/AboutUsHome";
 import Benefits from "../components/Benefits";
@@ -9,6 +10,14 @@ import SellPanel from "../components/SellPanel";
 import Testimonial from "../components/Testimonials";
 
 const Home = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+  
   return (
     <>
       <MetaUpdater

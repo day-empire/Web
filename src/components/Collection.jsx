@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useState } from "react";
 
@@ -58,7 +56,7 @@ const Collection = () => {
           </a>
 
           <a
-            href="#BuyCards"
+            href="/#BuyCards"
             title="Search Day Empire Collection"
             className="flex items-center underline hover:no-underline justify-center gap-2 px-6 py-3 relative bg-white rounded-lg text-black hover:text-gray-500"
           >
@@ -152,7 +150,7 @@ const Collection = () => {
       >
         <div className="bg-[#F5F5F5] py-6 px-6 sm:p-16 rounded-[16px]">
           <h3 className="font-bold font-display text-3xl lg:text-4xl tracking-tight text-black mb-4">
-            Search out collection
+            Search our collection
           </h3>
           <p className="mb-6 sm:mb-12">
             Search for any card or collectible, and we'll check if it's in stock
